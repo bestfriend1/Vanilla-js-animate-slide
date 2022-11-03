@@ -43,10 +43,10 @@ function prevSlide(){
     slideShow(slideIndex = slideIndex - 1);
 }
 
-if(true){
+if(false){
     setInterval(() =>{
         nextSlide();
-    },3000);
+    },4000);
 }else{
     leftBtn.onclick = function(){
         prevSlide();
