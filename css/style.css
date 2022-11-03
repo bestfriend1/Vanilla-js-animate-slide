@@ -1,0 +1,297 @@
+@import'./_base.css';
+.main{
+    display: block;
+    position: relative;
+    z-index: 10;
+    height: 100vh;
+}
+.main-area::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: rgb(0 0 0 / 50%);
+}
+.header-area{
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    padding: 13px 15px;
+    box-sizing: border-box;
+    z-index: 200;
+}
+.header-main{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+.logo-area{
+    display: block;
+}
+.logo-area img{
+    max-height: 75px;
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+}
+.header-right{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+    width: 100%;
+}
+.menu-area{
+    display: block;
+    width: 100%;
+}
+.menu-area ul{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    text-align: right;
+}
+.menu-area ul li{
+    display: inline-block;
+    margin-right: 20px;
+}
+.menu-area ul li a{
+    color: var(--color-white);
+    font-family: var(--font-en-poppins);
+    font-style: normal;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+    font-weight:700;
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+    transition: all 0.3s linear;
+}
+.menu-area ul li a i{
+    color: var(--color-primary);
+    font-size: 13px;
+    position: relative;
+    top: 1.5px;
+}
+.menu-area ul li a:hover{
+    color: var(--color-primary);
+}
+.tel{
+    display: block;
+    max-width: 210px;
+    text-align: center;
+    width: 100%;
+    border-left: 1px solid rgba(255, 255, 255, 0.1) ;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    margin: -0px 15px;
+}
+.tel a{
+    color: var(--color-white);
+    font-family: var(--font-en-poppins);
+    font-style: normal;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight:700;
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+    transition: all 0.3s linear;
+}
+.tel a i{
+    color: var(--color-primary);
+    font-size: 17px;
+    position: relative;
+    top: -1px;
+    transform: rotate(95deg);
+
+}
+.tel a:hover{
+    color: var(--color-primary);
+}
+.icon-menu{
+    display: block;
+    max-width: 150px;
+    width: 100%;
+}
+.icon-menu ul{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    text-align: right;
+}
+.icon-menu ul li{
+    display: inline-block;
+    margin-right: 15px;
+}
+.icon-menu ul li:last-child{
+    margin: 0px;
+}
+.icon-menu ul li a{
+    border: 1px solid var(--color-primary);
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+    font-size: 15px;
+    border-radius: 50%;
+    transition: all 0.3s linear;
+}
+.icon-menu ul li a:hover{
+    color: #fff;
+    background-color: var(--color-primary);
+}
+.banner-area{
+    display: block;
+    width: 100%;
+}
+.banner-area-main{
+    display: block;
+    width: 100%;
+}
+.banner-area-main .slide{
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+}
+.banner-img{
+    display: block;
+}
+.banner-img img{
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+    transform: scale(1);
+    opacity: 1;
+}
+.inactive-slide img{
+    transform: scale(1);
+    opacity: 0;
+    transition: transform 6s ease-out 0s, opacity 2s ease 0s;
+}
+.active-banner img{
+    transform: scale(1.1);
+    opacity: 1;
+    transition: transform 7000ms ease-out, opacity 2000ms ease;
+}
+.slide-text{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+    z-index: 15;
+    top: 50%;
+    transform: translate(0%,-80%)!important;
+    opacity: 0!important;
+    transition: opacity 0.6s ease 0s,transform 1.5s ease-out 0s;
+}
+
+.slide-text-inactive{
+    transform: translate(0%,-80%)!important;
+    opacity: 0!important;
+    /* transition: opacity 0.6s,transform 2s; */
+}
+.slide-text-active{
+    transform: translate(0%,-50%)!important;
+    opacity: 1!important;
+}
+.slide-text h3{
+    color: #fff;
+    font-family: var(--font-en-primary);
+    font-weight: 800;
+    display: block;
+    font-size: 85px;
+    line-height: 1.6;
+    margin-bottom: 10px!important;
+}
+.slide-text p{
+    max-width: 700px;
+    width: 100%;
+    margin: auto;
+    color: var( --color-gray);
+    font-family: var(  --font-en-primary);
+    font-weight: 400;
+    opacity: 0.9;
+    font-size: 18px;
+    line-height: 1.3;
+    margin-bottom: 40px!important;
+}
+.slide-text button{
+    background-color: var(--color-primary);
+    font-family: var(--font-en-poppins);
+    font-weight: 500;
+    display: block;
+    max-width: 250px;
+    width: 100%;
+    margin: auto;
+    border: 1px solid transparent;
+    padding: 20px 10px;
+    color: #ffff;
+    font-size: 17px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+    transition: all 0.3s linear;
+}
+.slide-text button::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height:100%;
+    background-color: #fff;
+    position: absolute;
+    left: 0px;
+    bottom: -100%;
+    z-index: -10;
+    transition: all 0.3s linear;
+
+}
+.slide-text button:hover::after{
+    bottom: 0px;
+}
+.slide-text button:hover{
+    color: var(--color-primary);
+}
+.indicator span{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    color: var(--color-primary);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: var(--color-black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 40;
+    cursor: pointer;
+}
+.indicator .left{
+    left: 20px;
+}
+.indicator .right{
+    right: 20px!important;
+}

@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inspiration&family=Jost:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+    --font-en-primary:'Jost', sans-serif;
+    --font-en-poppins:'Poppins', sans-serif;
+    --font-en-open-sans:'Open Sans', sans-serif;
+    --font-en-source:'Source Code Pro', monospace;
+    --color-primary:#4D8B55;
+    --color-black:#151515;
+    --color-white:#fff;
+    --color-gray:#efece5;
+}
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    display: block;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    font-family: var(--font-en-poppins);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    display: block;
+    background-color: var(--color-black);
+}
+a{
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    width: 100%;
+}
+a:hover{
+    color: var(--color-black);
+    text-decoration: none;
+}
+img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.container{
+    max-width: 1440px;
+    width: 100%;
+    margin: auto;
+}
